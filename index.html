@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vioo - Ultimate Shopping Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --premium-blue: #0066CC;
+            --crystal-white: #F8F9FA;
+            --deep-space: #1A1A1A;
+            --glossy: linear-gradient(145deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            background: var(--crystal-white);
+        }
+
+        /* Header */
+        .vioo-header {
+            background: linear-gradient(135deg, var(--premium-blue) 40%, var(--gold) 150%);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--gold), #FFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,102,204,0.8), rgba(0,0,0,0.7)),
+                        url('https://files.catbox.moe/gmbcl9.png') center/cover;
+            color: white;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Stats */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            background: rgba(255,215,0,0.15);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .stat-item.show {
+            opacity: 1;
+            transform: translateY(0);
+            animation: countUp 1s ease-out;
+        }
+
+        /* Profit System */
+        .profit-system {
+            padding: 5rem 5%;
+            background: white;
+        }
+
+        .profit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .profit-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 5%;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header class="vioo-header">
+        <nav class="nav-container">
+            <div class="logo">VIOO</div>
+            <div class="nav-links">
+                <a href="#stats" class="nav-link">Statistik</a>
+                <a href="#profit" class="nav-link">Keuntungan</a>
+                <a href="#testimonials" class="nav-link">Testimoni</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 style="font-size: 4rem; line-height: 1.2;">
+                Revolusi Belanja Online<br>
+                <span style="color: var(--gold)">Dengan 1100+ Fitur</span>
+            </h1>
+            
+            <div class="stats-container" id="stats">
+                <div class="stat-item">
+                    <div class="stat-number">150K+</div>
+                    <div class="stat-label">Pembeli Aktif</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Kepuasan Pelanggan</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Prioritas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="profit-system" id="profit">
+        <h2 style="text-align: center; font-size: 2.5rem;">Sistem Keuntungan Vioo</h2>
+        <div class="profit-grid">
+            <div class="profit-card">
+                <i class="fas fa-rocket fa-2x" style="color: var(--gold);"></i>
+                <h3>Multi-Device Sync</h3>
+                <p>Akses dari 5 device berbeda secara bersamaan</p>
+            </div>
+            <div class="profit-card">
+                <i class="fas fa-shield-alt fa-2x" style="color: var(--gold);"></i>
+                <h3>Security Pro</h3>
+                <p>Enkripsi level militer untuk semua transaksi</p>
+            </div>
+            <!-- Tambahkan card lainnya -->
+        </div>
+    </section>
+
+    <section class="testimonials-grid" id="testimonials">
+        <div class="testimonial-card">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <div style="width: 50px; height: 50px; border-radius: 50%; background: #eee;"></div>
+                <div>
+                    <h4>Budi Santoso</h4>
+                    <p>Pengguna Premium</p>
+                </div>
+            </div>
+            <p style="margin-top: 1rem;">"Platform paling keren yang pernah saya gunakan! Fiturnya benar-benar revolusioner."</p>
+        </div>
+        <!-- Tambahkan testimoni lainnya -->
+    </section>
+
+    <a href="https://wa.me/6282285899023" class="whatsapp-btn">
+        <i class="fab fa-whatsapp fa-2x"></i>
+        <span>Chat Sekarang</span>
+    </a>
+
+    <script>
+        // Scroll Effects
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.vioo-header');
+            header.style.background = window.scrollY > 100 ? 
+                `linear-gradient(135deg, ${hexToRgba('#0066CC', 0.9)}, ${hexToRgba('#FFD700', 0.8)})` : 
+                'linear-gradient(135deg, #0066CC 40%, #FFD700 150%)';
+            
+            // Animate stats
+            document.querySelectorAll('.stat-item').forEach((item, index) => {
+                const rect = item.getBoundingClientRect();
+                if(rect.top < window.innerHeight * 0.8) {
+                    setTimeout(() => item.classList.add('show'), index * 200);
+                }
+            });
+        });
+
+        function hexToRgba(hex, alpha) {
+            const r = parseInt(hex.slice(1, 3), 16),
+                  g = parseInt(hex.slice(3, 5), 16),
+                  b = parseInt(hex.slice(5, 7), 16);
+            return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+        }
+    </script>
+</body>
+                  </html>
