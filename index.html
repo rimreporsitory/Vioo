@@ -3,34 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vioo - Multidevice</title>
+  <title>Vioo - MultiDevice</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-    
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
       overflow-x: hidden;
     }
-    
     .glossy-card {
       background: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
       backdrop-filter: blur(10px);
       border-radius: 20px;
-      box-shadow: 0 15px 30px rgba(255, 215, 0, 0.1), 
-                  inset 0 2px 5px rgba(255,255,255,0.5);
+      box-shadow: 0 15px 30px rgba(255, 215, 0, 0.1), inset 0 2px 5px rgba(255,255,255,0.5);
       border: 1px solid rgba(255,255,255,0.3);
       transition: all 0.3s ease;
     }
-    
     .glossy-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2), 
-                 inset 0 2px 5px rgba(255,255,255,0.5);
+      box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2), inset 0 2px 5px rgba(255,255,255,0.5);
     }
-    
     .glossy-button {
       background: linear-gradient(145deg, #FFD700 0%, #FFC400 100%);
       box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
@@ -38,16 +32,13 @@
       position: relative;
       overflow: hidden;
     }
-    
     .glossy-button:hover {
       transform: translateY(-3px);
       box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
     }
-    
     .glossy-button:active {
       transform: translateY(1px);
     }
-    
     .glossy-button::after {
       content: '';
       position: absolute;
@@ -55,15 +46,10 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: linear-gradient(
-        to bottom right,
-        rgba(255, 255, 255, 0.3) 0%,
-        rgba(255, 255, 255, 0) 60%
-      );
+      background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 60%);
       transform: rotate(30deg);
       transition: all 0.3s ease;
     }
-    
     .thumbnail-circle {
       width: 150px;
       height: 150px;
@@ -73,51 +59,35 @@
       margin: 0 auto;
       overflow: hidden;
     }
-    
     .feature-icon {
       background: linear-gradient(145deg, #FFD700 0%, #FFC400 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-    
     .slide-button {
       animation: pulse 2s infinite;
     }
-    
     @keyframes pulse {
-      0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
-      }
-      70% {
-        transform: scale(1.03);
-        box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
-      }
-      100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
-      }
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
+      70% { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
     }
-    
     .slide-in {
       animation: slideIn 0.5s ease-out forwards;
     }
-    
     @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
     }
+    .testimonial-slider { position: relative; overflow: hidden; }
+    .testimonial-container { display: flex; transition: transform 0.5s ease-in-out; }
+    .testimonial { min-width: 100%; box-sizing: border-box; }
+    .keuntungan-item { background: linear-gradient(145deg, #FFF9C4 0%, #FFFDE7 100%); border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); }
+    .footer-link:hover { text-decoration: underline; }
   </style>
 </head>
 <body class="min-h-screen text-gray-800">
-  <!-- Hero Section -->
   <div class="relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-r from-yellow-50 to-white opacity-90"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -129,21 +99,22 @@
           <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 to-yellow-400">VIOO</span> MULTIDEVICE
         </h1>
         <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-10 slide-in delay-1">
-          Premium Bot WhatsApp with <span class="font-semibold text-yellow-600">1100+ Powerful Features</span>
+          Premium Shopping Platform with <span class="font-semibold text-yellow-600">1100+ Powerful Features</span>
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4 slide-in delay-2">
-          <a href="https://wa.me/6282285899023" class="glossy-button text-white font-bold py-4 px-8 rounded-full text-lg mx-auto sm:mx-0">
+          <a href="https://wa.me/6282285899023" class="glossy-button text-white font-bold py-4 px-8 rounded-full text-lg">
             <i class="fab fa-whatsapp mr-2"></i> Hubungi Kami
           </a>
-          <a href="#features" class="bg-white text-yellow-600 font-bold py-4 px-8 rounded-full text-lg border-2 border-yellow-600 hover:bg-yellow-50 transition-all mx-auto sm:mx-0">
+          <a href="#features" class="bg-white text-yellow-600 font-bold py-4 px-8 rounded-full text-lg border-2 border-yellow-600 hover:bg-yellow-50 transition-all">
             Jelajahi Fitur
+          </a>
+          <a href="https://wa.me/6283831409855" class="glossy-button text-white font-bold py-4 px-8 rounded-full text-lg">
+            <i class="fas fa-robot mr-2"></i> Test Bot
           </a>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Stats Section -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 slide-in delay-3">
     <div class="glossy-card p-6 md:p-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -162,12 +133,9 @@
       </div>
     </div>
   </div>
-
-  <!-- Features Section -->
   <div id="features" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Keunggulan <span class="text-yellow-600">VIOO</span></h2>
     <p class="text-xl text-center max-w-3xl mx-auto mb-12">Platform belanja modern dengan fitur terkini</p>
-    
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div class="glossy-card p-6">
         <div class="text-4xl mb-4 feature-icon">
@@ -176,7 +144,6 @@
         <h3 class="text-xl font-bold mb-3">Update Gratis</h3>
         <p class="text-gray-600">Update fitur terbaru secara berkala tanpa biaya tambahan</p>
       </div>
-      
       <div class="glossy-card p-6">
         <div class="text-4xl mb-4 feature-icon">
           <i class="fas fa-shield-alt"></i>
@@ -184,7 +151,6 @@
         <h3 class="text-xl font-bold mb-3">Keamanan Premium</h3>
         <p class="text-gray-600">Sistem enkripsi tingkat tinggi untuk transaksi aman</p>
       </div>
-      
       <div class="glossy-card p-6">
         <div class="text-4xl mb-4 feature-icon">
           <i class="fas fa-bolt"></i>
@@ -194,8 +160,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Promo Banner -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="glossy-card p-8 text-center bg-gradient-to-r from-yellow-100 to-white">
       <h2 class="text-2xl md:text-3xl font-bold mb-4 text-yellow-600">PENAWARAN TERBATAS!</h2>
@@ -204,44 +168,69 @@
       </div>
       <p class="text-lg mb-6">Harga Normal: <span class="line-through">Rp 150.000</span></p>
       <a href="https://wa.me/6282285899023" class="slide-button glossy-button text-white font-bold py-4 px-8 rounded-full text-lg inline-block">
-        <i class="fas fa-gift mr-2"></i> DAPATKAN DISKON SAMPAI HARI RAYA!
+        <i class="fas fa-gift mr-2"></i> DAPATKAN DISKON
       </a>
     </div>
   </div>
-
-  <!-- Testimonial Section -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gray-50">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Testimoni Pengguna</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="glossy-card p-8">
-        <p class="text-gray-600 mb-4">"Vioo benar-benar mengubah cara saya berbelanja online. Fiturnya lengkap dan mudah digunakan!"</p>
-        <h4 class="font-bold text-lg">- Budi, Pengusaha</h4>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Keuntungan Bergabung</h2>
+    <p class="text-xl text-center max-w-3xl mx-auto mb-12">Nikmati berbagai keuntungan eksklusif dengan menggunakan Vioo</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="keuntungan-item">
+        <i class="fas fa-shopping-cart text-5xl text-yellow-600 mb-4"></i>
+        <h3 class="text-2xl font-bold mb-2">Belanja Mudah</h3>
+        <p class="text-gray-600">Proses belanja yang cepat dan simpel.</p>
       </div>
-      <div class="glossy-card p-8">
-        <p class="text-gray-600 mb-4">"Pelayanan cepat dan sistem pembayaran yang aman. Recommended banget!"</p>
-        <h4 class="font-bold text-lg">- Siti, Ibu Rumah Tangga</h4>
+      <div class="keuntungan-item">
+        <i class="fas fa-lock text-5xl text-yellow-600 mb-4"></i>
+        <h3 class="text-2xl font-bold mb-2">Keamanan Terjamin</h3>
+        <p class="text-gray-600">Transaksi aman dengan sistem enkripsi canggih.</p>
+      </div>
+      <div class="keuntungan-item">
+        <i class="fas fa-headset text-5xl text-yellow-600 mb-4"></i>
+        <h3 class="text-2xl font-bold mb-2">Support 24/7</h3>
+        <p class="text-gray-600">Dukungan pelanggan kapan saja Anda butuhkan.</p>
       </div>
     </div>
   </div>
-
-  <!-- WhatsApp Button -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gray-50">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Testimoni Pengguna</h2>
+    <div class="testimonial-slider relative">
+      <div class="testimonial-container">
+        <div class="testimonial glossy-card p-8 flex flex-col items-center text-center">
+          <p class="text-gray-600 mb-4">"Vioo benar-benar mengubah cara saya berbelanja online. Fiturnya lengkap dan mudah digunakan!"</p>
+          <h4 class="font-bold text-lg">- Budi, Pengusaha</h4>
+        </div>
+        <div class="testimonial glossy-card p-8 flex flex-col items-center text-center">
+          <p class="text-gray-600 mb-4">"Pelayanan cepat dan sistem pembayaran yang aman. Recommended banget!"</p>
+          <h4 class="font-bold text-lg">- Siti, Ibu Rumah Tangga</h4>
+        </div>
+      </div>
+    </div>
+  </div>
   <a href="https://wa.me/6282285899023" class="fixed bottom-8 right-8 glossy-button text-white font-bold py-4 px-8 rounded-full text-lg flex items-center gap-2 shadow-lg">
     <i class="fab fa-whatsapp fa-lg"></i>
     <span>Chat Kami</span>
   </a>
-
+  <footer class="bg-gray-100 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gray-600">&copy; 2025 Vioo Store. All rights reserved.</p>
+      <div class="mt-4 flex justify-center gap-6">
+        <a href="#" class="footer-link text-gray-600 text-xl"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="footer-link text-gray-600 text-xl"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="footer-link text-gray-600 text-xl"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="footer-link text-gray-600 text-xl"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
   <script>
-    // Animasi Scroll
-    window.addEventListener('scroll', () => {
-      const cards = document.querySelectorAll('.glossy-card');
-      cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-        if(cardTop < window.innerHeight * 0.8) {
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }
-      });
-    });
+    let currentSlide = 0;
+    const container = document.querySelector('.testimonial-container');
+    const slides = document.querySelectorAll('.testimonial');
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      container.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }, 4000);
   </script>
 </body>
 </html>
